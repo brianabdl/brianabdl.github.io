@@ -1,11 +1,22 @@
+<!doctype html>
 <html>
     <head>
-        <title>Rewtio Profile</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- font-awesome icons css  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="styles.css">
+
+        <title>Rewtio Profile</title>
     </head>
+
     <body>
         <img class="imgprofile" src="images/profile.jpg" alt="profile">
-        <div class="profile">
+        <card class="profile">
             <p>
                 <strong>Name: Muhammad Brian Abdillah</strong>
             </p>
@@ -22,24 +33,30 @@
                 <strong>Interests: Android Development</strong>
             </p>
             <p>
-                <strong>Email:
-                    <a href="mailto:mohammadbrianabdillah@gmail.com">mohammadbrianabdillah@gmail.com</a>
-                </strong>
+                <strong>Social Platform:</strong>
             </p>
-            <p>
-                <strong>Github:
-                    <a href="https://github.com/Rewtio">
-                        <img src="images/GitHub-Mark-32px.png" alt="github">
+            <ul class="social_icons">
+                <li>
+                    <a href="mailto:mohammadbrianabdillah@gmail.com" style="color: maroon;">
+                        <i class="fas fa-envelope"></i>
                     </a>
-                </strong>
-            </p>
-            <p>
-                <strong>Linkedin:
-                    <a href="https://www.linkedin.com/in/muhammad-brian-abdillah-57b872242/">
-                        <img style="width: 32px; height:32px;" src="images/LI-In-Bug.png" alt="linkedin">
+                </li>
+                <li>
+                    <a href="https://github.com/Rewtio" style="color: black;">
+                        <i class="fab fa-github"></i>
                     </a>
-                </strong>
-            </p>
-        </div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/muhammad-brian-abdillah-57b872242" style="color: blue;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/brian45r" style="color: deeppink;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </card>
     </body>
 </html>
