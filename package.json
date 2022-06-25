@@ -1,0 +1,23 @@
+{
+  "name": "rewtio.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rewtio/Rewtio.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rewtio/Rewtio.github.io/issues"
+  },
+  "homepage": "https://github.com/Rewtio/Rewtio.github.io#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}
