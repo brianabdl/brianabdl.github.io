@@ -161,15 +161,15 @@ const Body = () => {
                 {/*  Button navigate to about, karya, kontak  */}
                 <div className='flex flex-col justify-center items-center mt-8'>
                     <div className='flex flex-row justify-center items-baseline space-x-4'>
-                        <a href='/karya' className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Karya</a>
-                        <a href='/dokumentasi' className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Dokumentasi</a>
+                        <a href='/karya' className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Karya</a>
+                        <a href='/dokumentasi' className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Dokumentasi</a>
                     </div>
                     <div className='flex flex-row justify-center items-baseline space-x-4 mt-4'>
-                        <a href='/pages/about'
-                           className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>About
+                        <a href='/about'
+                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>About
                             Me</a>
                         <a href='/contact'
-                           className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Contact
+                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Contact
                             Me</a>
                     </div>
                 </div>
