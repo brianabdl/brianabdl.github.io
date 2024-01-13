@@ -1,6 +1,6 @@
 import Header from '@/app/header'
-import Body from "./body";
 import Footer from "@/app/footer";
+import Body from "@/app/creation/body";
 
 export default function Home() {
     return (
