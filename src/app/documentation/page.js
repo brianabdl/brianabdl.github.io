@@ -1,5 +1,5 @@
-import Header from "@/app/header";
-import Body from "@/app/body";
+import Header from '@/app/header'
+import Body from "./body";
 import Footer from "@/app/footer";
 
 export default function Home() {

@@ -14,7 +14,7 @@ const Body = () => {
                     <p className='text-xl lg:text-3xl lg:pt-4 text-center'>Student at SMK Pawyatan Daha 1 Kediri.</p>
                 </div>
                 <div className='flex flex-row justify-center items-center mt-8'>
-                    <a href='/contact'
+                    <a href='/about'
                        className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded-md'>Contact
                         Me</a>
                 </div>
@@ -39,41 +39,44 @@ const Body = () => {
                 </div>
             </div>
             {/* Background Story */}
-            <div className='flex flex-col lg:flex-row items-start p-12 pl-24 pr-24 bg-white'>
+            <div className='flex flex-col lg:flex-row items-start p-12 pl-24 pr-24 bg-white space-x-4'>
                 <div className='flex flex-col justify-start items-center lg:items-start'>
                     <h1 className='text-2xl lg:text-3xl font-bold text-black'>Background Story</h1>
                     <a className='pt-4 text-lg lg:text-xl text-balance text-center lg:text-start max-w-4xl text-gray-600'>Memulai
                         membangung karir
-                        programming sejak SMP kemudian salah jurusan ketika SMK sehingga belajar terlalu banyak hal baru
+                        sebagai programmer sejak SMP kemudian salah jurusan ketika SMK sehingga belajar terlalu banyak hal baru
                         yang cukup menyenangkan. Saat ini tetap memperjuangkan karir sebagai Android Developer namun
                         ditambah dengan keahlian mendesign.</a>
                 </div>
-                <div className='flex flex-col justify-start items-center'>
-                    <h1 className='text-2xl lg:text-3xl font-bold text-black pt-4  lg:pt-0'>Skills</h1>
+                <div className='flex flex-col justify-start items-stretch space-y-4'>
+                    <h1 className='text-2xl lg:text-3xl font-bold text-black items-center lg:pt-0'>Skills</h1>
 
-                    <div className='flex flex-col justify-evenly items-start pt-4'>
+                    <div className='flex flex-col justify-evenly items-stretch'>
                         {/* Multimedia contain Adobe Premiere Pro, Adobe Photoshop, Canva */}
                         <h2 className='text-lg lg:text-xl font-bold text-black'>* Multimedia</h2>
-                        <div className='flex flex-row justify-between items-start pt-4 w-full'>
+                        <div className='flex flex-row justify-between items-start pt-4 space-x-8'>
                             <div className='flex flex-col justify-start items-center'>
                                 <Image className='object-scale-down' width={50} height={80} src='adobe-premiere.svg'
                                        alt='adobe premiere pro'/>
                                 <p className='pt-4 text-lg lg:text-xl whitespace-nowrap	text-gray-500'>Premiere
                                     Pro</p>
                             </div>
-                            <div className='flex flex-col justify-center items-center pl-4'>
+                            <div className='flex flex-col justify-center items-center'>
                                 <Image className='object-scale-down' width={50} height={50} src='photoshop.svg'
                                        alt='adobe photoshop'/>
                                 <p className='pt-4 text-lg lg:text-xl text-gray-500'>Photoshop</p>
                             </div>
-                            <div className='flex flex-col justify-end items-center pl-4'>
+                            <div className='flex flex-col justify-end items-center'>
                                 <Image className='object-scale-down' width={50} height={50} src='canva.svg'
                                        alt='canva'/>
                                 <p className='pt-4 text-lg lg:text-xl text-gray-500'>Canva</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div className='flex flex-col justify-evenly items-stretch'>
                         {/*  */}
-                        <h2 className='text-lg lg:text-xl font-bold text-black pt-4'>* Programming</h2>
+                        <h2 className='text-lg lg:text-xl font-bold text-black'>* Programming</h2>
                         <div className='flex flex-row justify-between items-start pt-4 w-full'>
                             <div className='flex flex-col justify-start items-center'>
                                 <Image className='object-scale-down' width={50} height={50}
@@ -156,20 +159,22 @@ const Body = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col justify-between items-center p-12 bg-white'>
+            <div className='flex flex-col justify-between items-center p-12 bg-white space-y-8'>
                 <h1 className='w-full text-2xl lg:text-3xl font-bold text-center text-black'>Cari Tahu Lebih Lanjut</h1>
                 {/*  Button navigate to about, karya, kontak  */}
-                <div className='flex flex-col justify-center items-center mt-8'>
+                <div className='flex flex-col justify-between items-center'>
                     <div className='flex flex-row justify-center items-baseline space-x-4'>
-                        <a href='/karya' className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Karya</a>
-                        <a href='/dokumentasi' className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Dokumentasi</a>
+                        <a href='/creation'
+                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Karya</a>
+                        <a href='/documentation'
+                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Dokumentasi</a>
                     </div>
                     <div className='flex flex-row justify-center items-baseline space-x-4 mt-4'>
-                        <a href='/pages/about'
-                           className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>About
+                        <a href='/about'
+                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>About
                             Me</a>
-                        <a href='/contact'
-                           className='bg-transparent bg-blue-600 hover:bg-blue-700 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Contact
+                        <a href='/about'
+                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Contact
                             Me</a>
                     </div>
                 </div>
