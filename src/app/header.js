@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faImages, faUserCircle} from "@fortawesome/free-solid-svg-icons";
 import {faArtstation} from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,23 +34,23 @@ const Header = () => {
                     className="text-sm lg:flex lg:flex-grow lg:justify-end space-y-4 lg:space-y-0 pt-4 lg:pt-0 lg:space-x-6">
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faHome} className="lg:hidden"/>
-                        <a href="/" className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600 mr-4">Home</a>
+                        <Link href="/" className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600 mr-4">Home</Link>
                     </div>
 
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faArtstation} className="lg:hidden"/>
-                        <a href="/creation"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600 mr-4">Karya</a>
+                        <Link href="/creation"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600 mr-4">Karya</Link>
                     </div>
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faImages} className="lg:hidden"/>
-                        <a href="/documentation"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600">Dokumentasi</a>
+                        <Link href="/documentation"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600">Dokumentasi</Link>
                     </div>
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faUserCircle} className="lg:hidden"/>
-                        <a href="/about"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600">Tentang</a>
+                        <Link href="/about"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-500 hover:text-gray-600">Tentang</Link>
                     </div>
                 </div>
             </div>

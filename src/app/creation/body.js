@@ -1,5 +1,8 @@
 'use client';
 import React, {useState} from 'react';
+import Image from 'next/image';
+import Link from "next/link";
+
 
 const categories = [
     {id: 1, name: "All Categories"},
@@ -80,13 +83,15 @@ const Body = () => {
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen/>
                             ) : (
-                                <img className="aspect-video rounded-lg w-full" src={el.image}
-                                     title={el.name}/>
+                                <Image className="aspect-video rounded-lg w-full" src={el.image}
+                                       title={el.name} alt={el.name}
+                                       width={0}
+                                       height={0}/>
                             )}
                             <h1 className="text-lg font-bold">{el.name}</h1>
                             <div className='pb-4'>
-                                <a href={el.url} target="_blank" rel="noopener noreferrer"
-                                   className="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">Visit</a>
+                                <Link href={el.url} target="_blank" rel="noopener noreferrer"
+                                      className="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">Visit</Link>
                             </div>
                         </div>)
                     })}
