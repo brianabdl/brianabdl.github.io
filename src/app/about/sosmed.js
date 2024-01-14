@@ -1,7 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faInstagram, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
 
 export const dictSocialMedia = [
     {
@@ -33,11 +32,11 @@ export const dictSocialMedia = [
 
 export const SocialMedia = (props) => {
     return (
-        <div className="flex flex-col justify-center items-center space-y-2">
-            <h2 className='space-y-2 text-lg font-bold'>{props.name}</h2>
-            <Link href={props.link} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={props.icon} alt={props.name} width={50} height={50}/>
-            </Link>
+        <div className="flex flex-col items-center">
+            <a href={props.link} target="_blank" rel="noreferrer" className='space-y-2'>
+                <h2 className='space-y-2 text-sm lg:text-lg font-bold'>{props.name}</h2>
+                <FontAwesomeIcon icon={props.icon} size="3x" className={'w-8 lg:w-max'}/>
+            </a>
         </div>
     )
 }

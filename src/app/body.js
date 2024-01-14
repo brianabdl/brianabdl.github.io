@@ -48,9 +48,9 @@ const Body = () => {
                     <p className='text-xl md:text-3xl md:pt-4 text-center'>Student at SMK Pawyatan Daha 1 Kediri.</p>
                 </div>
                 <div className='flex flex-row justify-center items-center mt-8'>
-                    <Link href='/about'
-                       className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded-md'>Contact
-                        Me</Link>
+                    <a href='/about'
+                          className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded-md'>Contact
+                        Me</a>
                 </div>
             </div>
             <div className='flex flex-row bg-white w-full p-12'>
@@ -66,9 +66,10 @@ const Body = () => {
                             pelajar yang sedang
                             menempuh pendidikan di SMK Pawyatan Daha 1 Kediri pada jurusan Multimedia. Seperti jurusan
                             yang diambil, ia adalah seorang yang multitalenta, berpendidikan, dan terpelajar.</p>
-                        <Link href='https://drive.google.com/drive/folders/1Tad9OEC0vh_lmlanVxY0QTXPVC-puVke?usp=sharing'
-                           target='_opener'
-                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded-md mt-8'>Download
+                        <Link
+                            href='https://drive.google.com/drive/folders/1Tad9OEC0vh_lmlanVxY0QTXPVC-puVke?usp=sharing'
+                            target='_opener'
+                            className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded-md mt-8'>Download
                             CV</Link>
                     </div>
                 </div>
@@ -150,18 +151,18 @@ const Body = () => {
                 {/*  Button navigate to about, karya, kontak  */}
                 <div className='flex flex-col justify-between items-center'>
                     <div className='flex flex-row justify-center items-baseline space-x-4'>
-                        <Link href='/creation'
-                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Karya</Link>
-                        <Link href='/documentation'
-                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Dokumentasi</Link>
+                        <a href='/creation'
+                              className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Karya</a>
+                        <a href='/documentation'
+                              className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Dokumentasi</a>
                     </div>
                     <div className='flex flex-row justify-center items-baseline space-x-4 mt-4'>
-                        <Link href='/about'
-                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>About
-                            Me</Link>
-                        <Link href={'/about'}
-                           className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Contact
-                            Me</Link>
+                        <a href='/about'
+                              className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>About
+                            Me</a>
+                        <a href='/about'
+                              className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-md'>Contact
+                            Me</a>
                     </div>
                 </div>
             </div>
