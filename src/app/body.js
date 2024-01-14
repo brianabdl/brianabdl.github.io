@@ -13,11 +13,11 @@ const SkillsItem = (item) => {
     </div>)
 }
 
-const Skills = ({title, items}) => {
-    return (<div className='flex flex-col justify-evenly items-center md:items-stretch'>
-        <h2 className='text-lg md:text-xl font-bold text-black'>{title}</h2>
+const Skills = (props) => {
+    return (<div className='flex flex-col justify-evenly items-stretch'>
+        <h2 className='text-lg md:text-xl font-bold text-center md:text-start text-black'>{props.title}</h2>
         <div className='flex flex-row justify-between items-start pt-4 space-x-4'>
-            {items.map((item) => (
+            {props.items.map((item) => (
                 SkillsItem(item)
             ))}
         </div>
@@ -27,14 +27,11 @@ const Skills = ({title, items}) => {
 const ExpBox = ({title, description, image}) => (
     <div
         className='flex flex-col justify-start items-start p-8 max-w-64 hover:outline hover:outline-cyan-300 shadow-md shadow-cyan-400'>
-        {/* Logo */}
         <div
-            className='rounded-full bg-cyan-200 border border-solid border-cyan-600 border-collapse w-10 p-2.5'>
+            className='rounded-full bg-cyan-200 border border-solid border-cyan-600 border-collapse w-10 h-10 p-3 flex items-center justify-center'>
             <FontAwesomeIcon icon={image} color={"#0891b2"}/>
         </div>
-        {/* Title */}
-        <h1 className='pt-4 text-md md:text-lg text-black'>{title}</h1>
-        {/* Description */}
+        <h1 className='text-md md:text-lg text-black pt-4'>{title}</h1>
         <p className='text-sm md:text-base text-pretty text-gray-500'>{description}</p>
     </div>
 )
@@ -60,9 +57,10 @@ const Body = () => {
                            src='me.jpg'
                            alt='profile'/>
                     <div className='flex flex-col justify-center items-center md:items-start md:pl-12 pt-4 md:pt-0'>
-                        <h1 className='text-2xl md:text-3xl font-bold text-black'>Muhammad Brian Abdillah</h1>
+                        <h1 className='text-2xl md:text-3xl font-bold text-center text-black md:text-start'>Muhammad
+                            Brian Abdillah</h1>
                         <h2 className='text-xl md:text-2xl text-gray-500'>Tinggal di Kediri, Jawa Timur</h2>
-                        <p className='pt-4 text-lg md:text-xl text-center md:text-start text-pretty text-gray-500'>Seorang
+                        <p className='text-lg md:text-xl pt-4 text-center md:text-start text-pretty text-gray-500'>Seorang
                             pelajar yang sedang
                             menempuh pendidikan di SMK Pawyatan Daha 1 Kediri pada jurusan Multimedia. Seperti jurusan
                             yang diambil, ia adalah seorang yang multitalenta, berpendidikan, dan terpelajar.</p>
@@ -85,9 +83,9 @@ const Body = () => {
                         yang cukup menyenangkan. Saat ini tetap memperjuangkan karir sebagai Android Developer namun
                         ditambah dengan keahlian mendesign.</p>
                 </div>
-                <div className='flex flex-col justify-evenly items-start md:items-stretch md:flex-1 space-y-4'>
-                    <h1 className='text-2xl md:text-3xl font-bold text-black pt-8 md:pt-0'>Skills</h1>
-                    <Skills title='* Multimedia' items={[
+                <div className='flex flex-col justify-evenly items-center md:items-stretch md:flex-1 space-y-4 w-full'>
+                    <h1 className='text-2xl md:text-3xl font-bold text-black pt-8 md:pt-0 '>Skills</h1>
+                    <Skills title='Multimedia' items={[
                         {
                             name: 'Premiere Pro',
                             image: 'adobe-premiere.svg',
@@ -101,7 +99,7 @@ const Body = () => {
                             image: 'canva.svg',
                         }
                     ]}/>
-                    <Skills title='* Programming' items={[
+                    <Skills title='Programming' items={[
                         {
                             name: 'Java',
                             image: 'https://cdn.iconscout.com/icon/free/png-512/java-43-569305.png'
