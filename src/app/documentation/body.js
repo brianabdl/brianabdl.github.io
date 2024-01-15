@@ -16,9 +16,9 @@ const Body = () => {
                                 width={0}
                                 height={0}/>
                             <div className="flex flex-col items-center justify-center">
-                                <h2 className="text-sm md:text-lg text-pretty font-bold">{el.name}</h2>
-                                <p className="text-xs md:text-md">{el.date}</p>
-                                <p className="text-xs md:text-md">{el.place}</p>
+                                <h2 className="text-sm md:text-lg text-balance font-bold">{el.name}</h2>
+                                <p className="text-xs md:text-sm">{el.date}</p>
+                                <p className="text-xs md:text-sm">{el.place}</p>
                             </div>
                         </div>
                     ))}
