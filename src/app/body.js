@@ -42,7 +42,7 @@ const Body = () => {
             <div className='h-screen p-8 flex flex-col justify-center -mt-20'>
                 <div className='flex flex-col items-center'>
                     <h1 className='text-4xl md:text-6xl font-bold text-center'>Hi, I&apos;m Brian</h1>
-                    <p className='text-xl md:text-3xl md:pt-4 text-center'>Student at SMK Pawyatan Daha 1 Kediri.</p>
+                    <p className='text-xl md:text-3xl md:pt-4 text-center'>Student at State University of Surabaya.</p>
                 </div>
                 <div className='flex flex-row justify-center items-center mt-8'>
                     <a href='/about'
@@ -61,8 +61,8 @@ const Body = () => {
                             Brian Abdillah</h1>
                         <h2 className='text-xl md:text-2xl text-gray-500'>Tinggal di Kediri, Jawa Timur</h2>
                         <p className='text-lg md:text-xl pt-4 text-center md:text-start text-pretty text-gray-500'>Seorang
-                            pelajar yang sedang
-                            menempuh pendidikan di SMK Pawyatan Daha 1 Kediri pada jurusan Multimedia. Seperti jurusan
+                            mahasiswa yang sedang
+                            menempuh pendidikan di Universitas Negeri Surabaya pada jurusan Manajemen Informatika. Seperti jurusan
                             yang diambil, ia adalah seorang yang multitalenta, berpendidikan, dan terpelajar.</p>
                         <Link
                             href='https://drive.google.com/drive/folders/1Tad9OEC0vh_lmlanVxY0QTXPVC-puVke?usp=sharing'

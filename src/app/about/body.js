@@ -6,12 +6,12 @@ const Body = () => {
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <main className="flex flex-col items-center justify-center flex-1 text-center">
                 <Image src='me.jpg' alt='Picture of the author' width={200} height={200} className='rounded-full'/>
-                <h1 className="text-lg lg:text-xl font-bold pt-4">Halo, saya Brian</h1>
-                <p className="mt-3 text-sm lg:text-lg">Siswa di SMK Pawyatan Daha 1 Kediri</p>
+                <h1 className="text-lg lg:text-xl font-bold pt-4">Hi, I&apos;m Brian</h1>
+                <p className="mt-3 text-sm lg:text-lg">Student at State University of Surabaya</p>
 
                 {/* Bio Data */}
                 <div className="flex flex-col justify-center items-center mt-12">
-                    <h1 className="text-lg lg:text-xl font-bold">Bio Data</h1>
+                    <h1 className="text-lg lg:text-xl font-bold whitespace-nowrap">Bio Data</h1>
                     <div className="flex flex-col md:flex-row justify-stretch items-center mt-2 space-y-4 md:space-y-0 md:space-x-8">
                         <div className="flex flex-col justify-begin items-center md:w-1/3">
                             <h2 className="text-sm lg:text-lg font-bold whitespace-nowrap">Nama</h2>
