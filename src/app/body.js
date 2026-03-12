@@ -64,11 +64,6 @@ const Body = () => {
                             mahasiswa yang sedang
                             menempuh pendidikan di Universitas Negeri Surabaya pada jurusan Manajemen Informatika. Seperti jurusan
                             yang diambil, ia adalah seorang yang multitalenta, berpendidikan, dan terpelajar.</p>
-                        <Link
-                            href='https://drive.google.com/drive/folders/1Tad9OEC0vh_lmlanVxY0QTXPVC-puVke?usp=sharing'
-                            target='_opener'
-                            className='bg-blue-500 hover:bg-blue-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded-md mt-8'>Download
-                            CV</Link>
                     </div>
                 </div>
             </div>
