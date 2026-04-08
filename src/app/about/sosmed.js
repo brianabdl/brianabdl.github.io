@@ -32,10 +32,10 @@ export const dictSocialMedia = [
 
 export const SocialMedia = (props) => {
     return (
-        <div className="flex flex-col items-center">
-            <a href={props.link} target="_blank" rel="noreferrer" className='space-y-2'>
-                <h2 className='space-y-2 text-sm lg:text-lg font-bold'>{props.name}</h2>
-                <FontAwesomeIcon icon={props.icon} size="3x" className={'w-8 lg:w-max'}/>
+        <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-slate-800 transition-colors duration-200">
+            <a href={props.link} target="_blank" rel="noreferrer" className='flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300'>
+                <FontAwesomeIcon icon={props.icon} size="2x" className='text-cyan-400'/>
+                <h2 className='text-sm lg:text-base font-semibold text-gray-300'>{props.name}</h2>
             </a>
         </div>
     )

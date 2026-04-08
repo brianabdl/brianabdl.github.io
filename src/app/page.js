@@ -4,10 +4,10 @@ import Footer from "@/app/footer";
 
 export default function Home() {
     return (
-        <body className="inter container">
+        <div className="inter w-full">
         <Header/>
         <Body/>
         <Footer/>
-        </body>
+        </div>
     )
 }

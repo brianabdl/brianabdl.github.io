@@ -30,7 +30,7 @@ export const documentation = [
   {
     id: 4,
     image: "documentation/KecesJurnalis.jpg",
-    name: "Ex-CEO Editing at Keces Jurnalis",
+    name: "CEO Editing at Keces Jurnalis",
     date: "Periode 2022-2023",
     place: "Kota Kediri"
   },
