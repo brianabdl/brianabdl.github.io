@@ -5,7 +5,7 @@ const Body = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-slate-900">
             <main className="flex flex-col items-center justify-center flex-1 text-center">
-                <Image src='me.jpg' alt='Picture of the author' width={200} height={200} className='rounded-full shadow-lg border-4 border-cyan-400'/>
+                <Image loading='lazy' src='me.jpg' alt='Picture of the author' width={200} height={200} className='rounded-full shadow-lg border-4 border-cyan-400'/>
                 <h1 className="text-lg lg:text-xl font-bold pt-4 text-white">Hi, I&apos;m Brian</h1>
                 <p className="mt-3 text-sm lg:text-lg text-gray-400">Student at State University of Surabaya</p>
 

@@ -14,7 +14,7 @@ const Body = () => {
                                 className="rounded-lg shadow-lg object-cover aspect-video w-full hover:scale-105 transition-transform duration-300"
                                 src={el.image}
                                 alt={el.name}
-                                loading='eager'
+                                loading='lazy'
                                 width={0}
                                 height={0}/>
                             <div className="flex flex-col items-center justify-center p-3 w-full">

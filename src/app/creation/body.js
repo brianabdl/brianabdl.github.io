@@ -85,6 +85,7 @@ const Body = () => {
                                         allowFullScreen/>
                             ) : (
                                 <Image className="aspect-video rounded-lg w-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" src={el.image}
+                                       loading='lazy'
                                        title={el.name} alt={el.name}
                                        width={0}
                                        height={0}/>

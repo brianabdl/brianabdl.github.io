@@ -55,7 +55,7 @@ const Body = () => {
             <div className='flex flex-row bg-slate-800 w-full p-12 shadow-lg border-b border-slate-700'>
                 <div className='flex flex-col md:flex-row justify-stretch items-center gap-8'>
                     <Image className='object-scale-down rounded-lg shadow-lg border-4 border-cyan-400' width={300}
-                           loading='eager'
+                           loading='lazy'
                            height={300}
                            src='me.jpg'
                            alt='profile'/>
