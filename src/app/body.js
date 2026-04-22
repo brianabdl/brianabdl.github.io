@@ -62,7 +62,7 @@ const Body = () => {
                     <div className='flex flex-col justify-center items-center md:items-start md:pl-4 pt-4 md:pt-0'>
                         <h1 className='text-2xl md:text-3xl font-bold text-center text-white md:text-start'>Muhammad
                             Brian Abdillah</h1>
-                        <h2 className='text-xl md:text-2xl text-cyan-400 font-semibold'>Tinggal di Kediri, Jawa Timur</h2>
+                        <h2 className='text-xl md:text-2xl text-cyan-400 font-semibold'>Surabaya, Jawa Timur</h2>
                         <p className='text-lg md:text-xl pt-4 text-center md:text-start text-pretty text-gray-300'>Seorang
                             mahasiswa yang sedang
                             menempuh pendidikan di Universitas Negeri Surabaya pada jurusan Manajemen Informatika. Seperti jurusan
