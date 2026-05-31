@@ -1,7 +1,7 @@
 'use client';
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHome, faImages, faUserCircle} from "@fortawesome/free-solid-svg-icons";
+import {faHome, faImages, faUserCircle, faPenNib} from "@fortawesome/free-solid-svg-icons";
 import {faArtstation} from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
@@ -45,6 +45,11 @@ const Header = () => {
                         <FontAwesomeIcon icon={faImages} className="lg:hidden"/>
                         <a href="/documentation"
                            className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Dokumentasi</a>
+                    </div>
+                    <div className="flex flex-row items-center space-x-1">
+                        <FontAwesomeIcon icon={faPenNib} className="lg:hidden"/>
+                        <a href="/blog"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Blog</a>
                     </div>
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faUserCircle} className="lg:hidden"/>
