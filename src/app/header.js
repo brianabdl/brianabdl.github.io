@@ -1,7 +1,8 @@
 'use client';
 import React, {useState} from 'react';
+import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHome, faImages, faUserCircle, faPenNib} from "@fortawesome/free-solid-svg-icons";
+import {faHome, faImages, faPenNib} from "@fortawesome/free-solid-svg-icons";
 import {faArtstation} from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
@@ -19,7 +20,10 @@ const Header = () => {
             <div className="block lg:hidden">
                 <button
                     className="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-300 hover:text-white hover:border-white transition-colors duration-200"
-                    onClick={toggleMenu}>
+                    onClick={toggleMenu}
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={isMenuOpen}
+                    aria-controls="primary-navigation">
                     <svg className="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
@@ -27,34 +31,30 @@ const Header = () => {
                 </button>
             </div>
             <div
-                className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto transition-all duration-500 ease-in-out transform 
+                id="primary-navigation"
+                className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto transition-all duration-500 ease-in-out transform
                 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden lg:opacity-100 lg:max-h-full lg:block`}>
                 <div
                     className="text-sm lg:flex lg:flex-grow lg:justify-end space-y-4 lg:space-y-0 pt-4 lg:pt-0 lg:space-x-6">
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faHome} className="lg:hidden"/>
-                        <a href="/" className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200 mr-4">Home</a>
+                        <Link href="/" className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200 mr-4">Home</Link>
                     </div>
 
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faArtstation} className="lg:hidden"/>
-                        <a href="/creation"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Karya</a>
+                        <Link href="/creation"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Projects</Link>
                     </div>
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faImages} className="lg:hidden"/>
-                        <a href="/documentation"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Dokumentasi</a>
+                        <Link href="/documentation"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Documentation</Link>
                     </div>
                     <div className="flex flex-row items-center space-x-1">
                         <FontAwesomeIcon icon={faPenNib} className="lg:hidden"/>
-                        <a href="/blog"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Blog</a>
-                    </div>
-                    <div className="flex flex-row items-center space-x-1">
-                        <FontAwesomeIcon icon={faUserCircle} className="lg:hidden"/>
-                        <a href="/about"
-                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Tentang</a>
+                        <Link href="/blog"
+                           className="block lg:inline-block text-sm lg:text-base lg:font-bold text-gray-100 hover:text-white hover:underline transition-colors duration-200">Blog</Link>
                     </div>
                 </div>
             </div>

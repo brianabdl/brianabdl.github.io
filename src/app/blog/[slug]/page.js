@@ -3,6 +3,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
 import Header from "@/app/header";
 import Footer from "@/app/footer";
 import { getAllSlugs, getPostBySlug, slugifyTag } from "@/lib/posts";
@@ -114,8 +117,13 @@ export default async function BlogPost({ params }) {
                             priority
                         />
                     )}
-                    <div className="mt-6 prose prose-invert prose-cyan max-w-none prose-headings:text-white prose-a:text-cyan-400 prose-code:text-cyan-300 prose-pre:bg-slate-800 prose-pre:border prose-pre:border-slate-700">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+                    <div className="mt-6 prose prose-invert prose-cyan max-w-none prose-headings:text-white prose-a:text-cyan-400 prose-pre:border prose-pre:border-slate-700">
+                        <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
+                            rehypePlugins={[rehypeRaw, rehypeHighlight]}
+                        >
+                            {post.content}
+                        </ReactMarkdown>
                     </div>
                 </article>
             </main>

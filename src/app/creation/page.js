@@ -3,8 +3,8 @@ import Footer from "@/app/footer";
 import Body from "@/app/creation/body";
 
 export const metadata = {
-  title: 'Karya | M. Brian Abdillah',
-  description: 'Koleksi karya dan proyek yang telah dikerjakan oleh M. Brian Abdillah termasuk website, video, dan desain grafis.',
+  title: 'Projects | M. Brian Abdillah',
+  description: 'Software projects built by M. Brian Abdillah — Android apps, web apps, and data tools across Kotlin, Python, and Laravel.',
 }
 
 export default function Home() {

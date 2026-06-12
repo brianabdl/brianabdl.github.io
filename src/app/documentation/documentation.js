@@ -2,64 +2,64 @@ export const documentation = [
   {
     id: 1,
     image: "documentation/IndustriMaduTV.jpg",
-    name: "Kunjungan Industri: Madu TV",
+    name: "Industry Visit: Madu TV",
     date: "26-01-2022",
-    place: "Kota Tulungagung"
+    place: "Tulungagung"
   },
   {
     id: 2,
     image: "documentation/MajalahDigital.jpg",
-    name: "Finalist Kompetisi Majalah Digital 2022",
+    name: "Finalist of the Digital Magazine Competition 2022",
     date: "24-11-2022",
-    place: "Kota Surabaya"
+    place: "Surabaya"
   },
   {
     id: 3,
     image: "documentation/DigitalisasiSejarahNusantara.jpg",
-    name: "Juara 2: Digitalisasi Sejarah Nusantara Dalam Bingkai Nasionalisme",
+    name: "2nd Place: Digitalizing Indonesian History Through the Lens of Nationalism",
     date: "07-08-2023",
-    place: "Kota Kediri"
+    place: "Kediri"
   },
   {
     id: 3,
     image: "documentation/VlogCagarBudaya.jpg",
-    name: "Juara 3: Lomba Vlog Cagar Budaya",
+    name: "3rd Place: Cultural Heritage Vlog Competition",
     date: "29-10-2023",
-    place: "Kota Kediri"
+    place: "Kediri"
   },
   {
     id: 4,
     image: "documentation/KecesJurnalis.jpg",
     name: "CEO Editing at Keces Jurnalis",
-    date: "Periode 2022-2023",
-    place: "Kota Kediri"
+    date: "2022-2023",
+    place: "Kediri"
   },
   {
     id: 5,
     image: "documentation/JurnalisTraining.jpg",
-    name: "Panitia Jurnalis Training: Good Journalist In Digital Era",
+    name: "Organizing Committee, Journalist Training: Good Journalist In Digital Era",
     date: "06-08-2023",
-    place: "Kota Kediri"
+    place: "Kediri"
   },
   {
     id: 6,
     image: "documentation/PawonSinema.jpg",
     name: "Internship: Pawon Sinema",
-    date: "Oktober-Desember 2022",
-    place: "Kota Kediri"
+    date: "October-December 2022",
+    place: "Kediri"
   },
   {
     id: 7,
     image: "documentation/InternIndoweb.jpg",
     name: "Internship: Indoweb.id",
-    date: "Oktober-Desember 2023",
-    place: "Kota Kediri"
+    date: "October-December 2023",
+    place: "Kediri"
   },
   {
     id: 8,
     image: "documentation/KalibrantasSinema.jpg",
     name: "Volunteer Kalibrasi Roadshow Kediri: Film Ora Serem",
     date: "26-08-2022",
-    place: "Kota Kediri"
+    place: "Kediri"
   }
 ]

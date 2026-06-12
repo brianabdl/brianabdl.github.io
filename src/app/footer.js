@@ -30,10 +30,9 @@ const Footer = () => {
                         <h4 className='text-white font-bold mb-4'>Quick Links</h4>
                         <div className='flex flex-col space-y-2'>
                             <Link href='/' className='text-gray-400 hover:text-white transition-colors'>Home</Link>
-                            <Link href='/creation' className='text-gray-400 hover:text-white transition-colors'>Karya</Link>
-                            <Link href='/documentation' className='text-gray-400 hover:text-white transition-colors'>Dokumentasi</Link>
+                            <Link href='/creation' className='text-gray-400 hover:text-white transition-colors'>Projects</Link>
+                            <Link href='/documentation' className='text-gray-400 hover:text-white transition-colors'>Documentation</Link>
                             <Link href='/blog' className='text-gray-400 hover:text-white transition-colors'>Blog</Link>
-                            <Link href='/about' className='text-gray-400 hover:text-white transition-colors'>Tentang</Link>
                         </div>
                     </div>
 

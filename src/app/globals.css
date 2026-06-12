@@ -13,3 +13,32 @@ body {
   background: rgb(var(--background-start-rgb));
   min-height: 100vh;
 }
+
+/* Code blocks: let the highlight.js theme paint the box, and keep the
+   highlighted <code> transparent so there's no double background. */
+.prose pre {
+  background: #0d1117;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose pre code.hljs {
+  background: transparent;
+  padding: 0;
+}
+
+/* Inline code (not inside a fenced block) keeps the site's accent style. */
+.prose :not(pre) > code {
+  color: #67e8f9;
+  background: #1e293b;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+/* Tailwind Typography wraps inline <code> in backticks by default. */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
+

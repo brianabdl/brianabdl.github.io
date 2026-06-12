@@ -5,8 +5,8 @@ const Body = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-slate-900">
             <main className="flex flex-col items-center justify-center flex-1 text-center max-w-6xl">
-                <h1 className="text-2xl md:text-4xl font-bold pt-4 mb-2 text-white">Dokumentasi</h1>
-                <p className="text-gray-400 mb-8 px-4">Koleksi dokumentasi kegiatan dan acara yang telah saya ikuti</p>
+                <h1 className="text-2xl md:text-4xl font-bold pt-4 mb-2 text-white">Documentation</h1>
+                <p className="text-gray-400 mb-8 px-4">A collection documenting the activities and events I have taken part in</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 m-4 w-full">
                     {documentation.map((el, i) => (
                         <div className="flex flex-col items-center justify-start space-y-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-slate-800" key={i}>

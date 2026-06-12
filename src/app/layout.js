@@ -6,10 +6,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   metadataBase: new URL('https://brianabdl.my.id'),
   title: 'M. Brian Abdillah',
-  description: 'Portofolio Website of M. Brian Abdillah',
+  description: 'Portfolio website of M. Brian Abdillah',
   openGraph: {
     title: 'M. Brian Abdillah',
-    description: 'Portofolio Website of M. Brian Abdillah',
+    description: 'Portfolio website of M. Brian Abdillah',
     url: '/',
     siteName: 'M. Brian Abdillah',
     type: 'website',
@@ -17,7 +17,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'M. Brian Abdillah',
-    description: 'Portofolio Website of M. Brian Abdillah',
+    description: 'Portfolio website of M. Brian Abdillah',
   },
 }
 

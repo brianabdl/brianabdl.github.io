@@ -11,7 +11,6 @@ export default function sitemap() {
         "/blog/tags",
         "/creation",
         "/documentation",
-        "/about",
     ].map((route) => ({
         url: `${SITE_URL}${route}`,
         lastModified: new Date(),
