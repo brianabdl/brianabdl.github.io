@@ -18,7 +18,7 @@ So, i have an idea. Let's debug it.
 - **Running system:** Armbian bookworm, kernel `6.12.93-ophub`, booted from SD card
 - **Goal:** install that system to eMMC with `armbian-install` and boot from it standalone
 
-Everything below was done over SSH — the box sits headless on the LAN, no serial console attached.
+Everything below was done over SSH — the box sits headless on the LAN.
 
 ## Step 1: Reproduce the failure
 
@@ -35,10 +35,10 @@ First rule of debugging: watch it fail yourself. We ran the stock installer, sel
 [ SUCCESS ] Installation completed successfully.
 ```
 
-No errors. The script is happy. So the bug isn't in the install *process* — it's in what the install *produces*. Two details in that log turned out to matter:
+We found out that no errors were thrown during installation. So the bug isn't in the install *process* — it's in what the install *produces*. Two details in that log turned out to matter:
 
 1. `Successfully repartitioned eMMC with ampart` — the [ampart](https://github.com/7Ji/ampart) tool rewrote the eMMC's proprietary Amlogic partition table.
-2. The resulting MBR layout placed the FAT boot partition at **117 MiB**:
+2. The resulting MBR layout placed the FAT boot partition at 117 MiB:
 
 ```text
 Number  Start   End      Size     Type     File system  Flags
@@ -87,12 +87,9 @@ offset 116M: bootcmd found
 offset 628M: bootcmd found
 ```
 
-<img src="/blog/meme/sharkie.png" alt="Descriptive text" width="250" 
-        style="float: left; margin: 0em 0.5em 0em 0em;">
+A full, live environment — `bootcmd`, `start_emmc_autoscript`, the lot — sitting at 628 MiB(`0x27400000`). That's the *hardcoded* environment offset compiled into the ZTE stock U-Boot. It reads and writes there regardless of any partition table, EPT or MBR. And 628 MiB is squarely inside the FAT partition of the 117 MiB layout. Every `saveenv` from the stock autoscripts (and they do call `saveenv`) scribbles over the boot filesystem.
 
-A full, live environment — `bootcmd`, `start_emmc_autoscript`, the lot — sitting at **628 MiB** (`0x27400000`). That's the *hardcoded* environment offset compiled into the ZTE stock U-Boot. It reads and writes there **regardless of any partition table**, EPT or MBR. And 628 MiB is squarely inside the FAT partition of the 117 MiB layout. Every `saveenv` from the stock autoscripts (and they do call `saveenv`) scribbles over the boot filesystem.
-
-This also explains the [community folklore](https://forum.armbian.com/topic/25131-b860h-s905x-install-to-emmc/). The official Armbian community installer for these boxes reserves the first **1000 MB** ("various parts of the native android u-boot use various data in this space"), and [unifreq/openwrt_packit](https://github.com/unifreq/openwrt_packit) — the project ophub's installer descends from — uses a **700 MiB** reservation for s905x and *never* runs ampart for it.
+This also explains the [community folklore](https://forum.armbian.com/topic/25131-b860h-s905x-install-to-emmc/). The official Armbian community installer for these boxes reserves the first 1000 MB ("various parts of the native android u-boot use various data in this space"), and [unifreq/openwrt_packit](https://github.com/unifreq/openwrt_packit) — the project ophub's installer descends from — uses a 700 MiB reservation for s905x and *never* runs ampart for it.
 
 ## Step 4: The actual bug
 
@@ -181,8 +178,7 @@ $ ssh foxy@192.168.1.206 'df / ; grep DISK_TYPE /etc/ophub-release'
 /dev/mmcblk2p2   6202944 1760916   4425644  29% /
 DISK_TYPE='emmc'
 ```
-<img src="/blog/meme/cant-belive-it.png" alt="Descriptive text"
-style="display: block; margin: 1em auto;">
+<img src="/blog/meme/cant-belive-it.png" alt="Descriptive text" style="display: block; margin: 1em auto;">
 Twenty seconds after reboot, the box was up — running from eMMC, root on `/dev/mmcblk2p2` with the freshly generated UUID. We then restored the original `s905_autoscript` on the SD card, turning it back into a clean rescue medium.
 
 
@@ -197,7 +193,7 @@ The maintainer closed the PR — and then shipped the fix, restructured his way 
 without_ampart=("s905x")
 ```
 
-A new `check_release_file()` reads the running system's `SOC=` from `/etc/ophub-release` and disables ampart for listed SoCs — while an explicit `-a yes` can still force it for experimenters. The default behavior for s905x ends up **functionally identical to the PR**: ampart skipped, boot partition at 700 MiB, the exact configuration verified on this B860H. We confirmed the upstream version detects the SoC and prints `Use ampart tool: [ no ]` on the device.
+A new `check_release_file()` reads the running system's `SOC=` from `/etc/ophub-release` and disables ampart for listed SoCs — while an explicit `-a yes` can still force it for experimenters. The default behavior for s905x ends up functionally identical to the PR: ampart skipped, boot partition at 700 MiB, the exact configuration verified on this B860H. We confirmed the upstream version detects the SoC and prints `Use ampart tool: [ no ]` on the device.
 
 Since `armbian-install` is copied into images at build time, every future build picks the fix up automatically — no kernel or image recompilation required.
 
