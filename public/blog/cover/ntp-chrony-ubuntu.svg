@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Setup NTP di Ubuntu Server dengan Chrony</title>
+  <desc id="desc">Ilustrasi jam sinkron dengan garis waktu server terhubung ke beberapa sumber NTP</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="890" cy="200" r="320" fill="url(#glow)"/>
+
+  <!-- grid dots -->
+  <g fill="#334155">
+    <circle cx="60" cy="60" r="2"/><circle cx="110" cy="60" r="2"/><circle cx="160" cy="60" r="2"/>
+    <circle cx="60" cy="110" r="2"/><circle cx="110" cy="110" r="2"/><circle cx="160" cy="110" r="2"/>
+  </g>
+
+  <!-- clock icon -->
+  <g transform="translate(940,140)" stroke="#22d3ee" stroke-width="6" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="0" r="86" stroke-opacity="0.9"/>
+    <circle cx="0" cy="0" r="86" stroke="#0e7490" stroke-opacity="0.4" stroke-width="14"/>
+    <line x1="0" y1="0" x2="0" y2="-52" />
+    <line x1="0" y1="0" x2="38" y2="14" />
+    <circle cx="0" cy="0" r="6" fill="#22d3ee" stroke="none"/>
+  </g>
+  <g stroke="#38bdf8" stroke-width="3" fill="none" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.7">
+    <circle cx="940" cy="140" r="120"/>
+    <circle cx="940" cy="140" r="150"/>
+  </g>
+
+  <!-- server + sync arrows -->
+  <g transform="translate(120,430)">
+    <rect x="0" y="0" width="150" height="110" rx="10" fill="#111827" stroke="#334155" stroke-width="2"/>
+    <rect x="16" y="18" width="118" height="14" rx="3" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+    <rect x="16" y="42" width="118" height="14" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="16" y="66" width="118" height="14" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="26" cy="25" r="3" fill="#22c55e"/>
+  </g>
+  <g stroke="#22d3ee" stroke-width="2.5" opacity="0.8">
+    <line x1="280" y1="460" x2="420" y2="460"/>
+    <polygon points="420,455 432,460 420,465" fill="#22d3ee"/>
+    <line x1="280" y1="490" x2="420" y2="490"/>
+    <polygon points="420,485 432,490 420,495" fill="#22d3ee" opacity="0.5"/>
+  </g>
+
+  <text x="120" y="255" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" fill="#22d3ee" letter-spacing="2">$ chronyc tracking</text>
+  <text x="120" y="300" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#f8fafc">Setup NTP di Ubuntu Server</text>
+  <text x="120" y="352" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#22d3ee">dengan Chrony</text>
+  <text x="120" y="400" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8">Instalasi, konfigurasi, dan verifikasi sinkronisasi waktu — 2026</text>
+</svg>

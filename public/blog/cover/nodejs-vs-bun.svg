@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Node.js vs Bun: Benchmark Codebase Produksi</title>
+  <desc id="desc">Ilustrasi head-to-head runtime Node.js dan Bun dengan grafik bar throughput dan latency</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barNode" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#84cc16"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <linearGradient id="barBun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="200" r="340" fill="url(#glow)"/>
+
+  <!-- grid dots -->
+  <g fill="#334155">
+    <circle cx="60" cy="60" r="2"/><circle cx="110" cy="60" r="2"/><circle cx="160" cy="60" r="2"/>
+    <circle cx="60" cy="110" r="2"/><circle cx="110" cy="110" r="2"/><circle cx="160" cy="110" r="2"/>
+    <circle cx="60" cy="530" r="2"/><circle cx="110" cy="530" r="2"/><circle cx="160" cy="530" r="2"/>
+  </g>
+
+  <!-- title text -->
+  <text x="80" y="120" font-family="monospace, Menlo, monospace" font-size="46" font-weight="700" fill="#f8fafc">Node.js vs Bun</text>
+  <text x="82" y="165" font-family="monospace, Menlo, monospace" font-size="24" font-weight="400" fill="#94a3b8">codebase produksi, zero code change</text>
+
+  <!-- VS badge -->
+  <g transform="translate(720,96)">
+    <rect x="0" y="0" width="90" height="54" rx="12" fill="#0e7490" stroke="#22d3ee" stroke-width="2"/>
+    <text x="45" y="34" font-family="monospace, Menlo, monospace" font-size="22" font-weight="700" fill="#cffafe" text-anchor="middle">VS</text>
+  </g>
+
+  <!-- throughput bar chart -->
+  <!-- legend -->
+  <rect x="250" y="210" width="16" height="16" rx="3" fill="url(#barNode)"/>
+  <text x="274" y="224" font-family="monospace, Menlo, monospace" font-size="16" fill="#a3e635">Node</text>
+  <rect x="360" y="210" width="16" height="16" rx="3" fill="url(#barBun)"/>
+  <text x="384" y="224" font-family="monospace, Menlo, monospace" font-size="16" fill="#22d3ee">Bun</text>
+  <text x="500" y="224" font-family="monospace, Menlo, monospace" font-size="17" fill="#e2e8f0">req/s @ 20 conn</text>
+
+  <!-- Node bar (1.8k) -->
+  <g>
+    <rect x="250" y="260" width="180" height="40" rx="6" fill="url(#barNode)"/>
+    <text x="438" y="286" font-family="monospace, Menlo, monospace" font-size="18" font-weight="700" fill="#a3e635">1.8k</text>
+  </g>
+  <!-- Bun bar (4.1k) -->
+  <g>
+    <rect x="250" y="320" width="410" height="40" rx="6" fill="url(#barBun)"/>
+    <text x="668" y="346" font-family="monospace, Menlo, monospace" font-size="18" font-weight="700" fill="#22d3ee">4.1k</text>
+  </g>
+
+  <!-- multiplier callout -->
+  <g transform="translate(720,330)">
+    <rect x="0" y="0" width="300" height="56" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="150" y="24" font-family="monospace, Menlo, monospace" font-size="18" font-weight="700" fill="#cffafe" text-anchor="middle">~2.3x throughput</text>
+    <text x="150" y="46" font-family="monospace, Menlo, monospace" font-size="14" fill="#94a3b8" text-anchor="middle">~2.5x latency lebih rendah</text>
+  </g>
+
+  <!-- bottom stats row -->
+  <text x="80" y="440" font-family="monospace, Menlo, monospace" font-size="20" fill="#f8fafc">Startup</text>
+  <text x="80" y="468" font-family="monospace, Menlo, monospace" font-size="18" fill="#a3e635">Node ~1.7-1.85s</text>
+  <text x="80" y="494" font-family="monospace, Menlo, monospace" font-size="18" fill="#22d3ee">Bun ~1.37-1.56s</text>
+
+  <text x="520" y="440" font-family="monospace, Menlo, monospace" font-size="20" fill="#f8fafc">Memory (peak)</text>
+  <text x="520" y="468" font-family="monospace, Menlo, monospace" font-size="18" fill="#a3e635">Node ~619-670 MB</text>
+  <text x="520" y="494" font-family="monospace, Menlo, monospace" font-size="18" fill="#22d3ee">Bun ~430-439 MB</text>
+
+  <text x="860" y="440" font-family="monospace, Menlo, monospace" font-size="20" fill="#f8fafc">Testing</text>
+  <text x="860" y="468" font-family="monospace, Menlo, monospace" font-size="18" fill="#a3e635">Node + jest: 936 pass</text>
+  <text x="860" y="494" font-family="monospace, Menlo, monospace" font-size="18" fill="#fca5a5">Bun + jest: 57 run, 19 fail</text>
+
+  <line x1="80" y1="420" x2="1120" y2="420" stroke="#334155" stroke-width="1"/>
+</svg>
