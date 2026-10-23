@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
 
     const url = `/blog/${post.slug}`;
     return {
-        title: `${post.title} — M. Brian Abdillah`,
+        title: `${post.title} } M. Brian Abdillah`,
         description: post.description,
         alternates: { canonical: url },
         openGraph: {

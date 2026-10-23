@@ -4,11 +4,11 @@ import Footer from "@/app/footer";
 import { getAllTags } from "@/lib/posts";
 
 export const metadata = {
-    title: "Tags — M. Brian Abdillah",
+    title: "Tags | M. Brian Abdillah",
     description: "Browse blog posts by tag.",
     alternates: { canonical: "/blog/tags" },
     openGraph: {
-        title: "Tags — M. Brian Abdillah",
+        title: "Tags | M. Brian Abdillah",
         description: "Browse blog posts by tag.",
         url: "/blog/tags",
         type: "website",

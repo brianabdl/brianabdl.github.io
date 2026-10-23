@@ -16,11 +16,11 @@ export async function generateMetadata({ params }) {
 
     const url = `/blog/tags/${tag}`;
     return {
-        title: `#${label} — M. Brian Abdillah`,
+        title: `#${label} | M. Brian Abdillah`,
         description: `Posts tagged "${label}".`,
         alternates: { canonical: url },
         openGraph: {
-            title: `#${label} — M. Brian Abdillah`,
+            title: `#${label} | M. Brian Abdillah`,
             description: `Posts tagged "${label}".`,
             url,
             type: "website",

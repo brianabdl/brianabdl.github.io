@@ -38,7 +38,7 @@ export default function Body() {
   return <main className="page-wrap">
     <p className="section-kicker">Portfolio / Selected work</p>
     <h1 className="page-title display">Projects.</h1>
-    <p className="page-intro">Software I&apos;ve built — Android apps, web apps, and data tools.</p>
+    <p className="page-intro">Software I&apos;ve built, Android apps, web apps, and data tools.</p>
     <div className="my-12 flex flex-wrap gap-3">{categories.map((category) => <button key={category.id} type="button" onClick={() => setSelectedCategory(category.id)} className={`pill-button ${selectedCategory === category.id ? '' : 'secondary'}`}>{category.name}</button>)}</div>
     <div className="grid gap-4 md:grid-cols-2">{filtered.map((project, index) => <ProjectCard key={project.name} project={project} index={index} />)}</div>
   </main>;
