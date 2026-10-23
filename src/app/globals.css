@@ -105,13 +105,16 @@ button:focus-visible, a:focus-visible {
 .hero-copy { position: relative; z-index: 2; }
 .hero .page-intro { position: relative; }
 .schematic {
+  --pointer-x: 0px;
+  --pointer-y: 0px;
   position: absolute;
   z-index: 1;
   top: 50%;
   right: 3%;
   width: min(41vw, 520px);
   aspect-ratio: 1;
-  transform: translateY(-50%);
+  transform: translate(var(--pointer-x), calc(-50% + var(--pointer-y)));
+  transition: transform .7s ease-out;
   border: 1px solid rgba(60, 255, 208, .2);
   border-radius: 50%;
   opacity: .78;

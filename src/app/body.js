@@ -105,10 +105,13 @@ export default function Body() {
       const bounds = hero.getBoundingClientRect();
       const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 18;
       const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 12;
-      animate(schematic, { x, y, duration: 700, ease: 'outQuad' });
+      schematic.style.setProperty('--pointer-x', `${x}px`);
+      schematic.style.setProperty('--pointer-y', `${y}px`);
     };
     const resetSchematic = () => {
-      if (schematic) animate(schematic, { x: 0, y: 0, duration: 900, ease: 'outExpo' });
+      if (!schematic) return;
+      schematic.style.setProperty('--pointer-x', '0px');
+      schematic.style.setProperty('--pointer-y', '0px');
     };
     hero?.addEventListener('pointermove', moveSchematic);
     hero?.addEventListener('pointerleave', resetSchematic);
