@@ -73,7 +73,7 @@ export default async function BlogPost({ params }) {
     return (
         <div className="inter w-full">
             <Header />
-            <main className="min-h-screen bg-slate-900 py-16 px-4">
+            <main className="page-wrap min-h-screen">
                 <article className="max-w-3xl mx-auto">
                     <script
                         type="application/ld+json"
@@ -81,13 +81,14 @@ export default async function BlogPost({ params }) {
                     />
                     <Link
                         href="/blog"
-                        className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
+                        className="mono text-cyan-400 hover:text-cyan-300 text-xs transition-colors"
                     >
                         ← Back to blog
                     </Link>
 
                     <header className="mt-6 mb-10">
-                        <h1 className="text-3xl lg:text-4xl font-bold text-white">{post.title}</h1>
+                        <p className="section-kicker">Article / Field note</p>
+                        <h1 className="mt-5 text-4xl font-bold text-white md:text-6xl">{post.title}</h1>
                         {post.date && (
                             <p className="text-sm text-gray-500 mt-2">{formatDate(post.date)}</p>
                         )}
@@ -113,7 +114,7 @@ export default async function BlogPost({ params }) {
                             alt={post.title}
                             width={1200}
                             height={630}
-                            className="mt-6 w-full h-auto rounded-lg border border-slate-700 shadow-md object-cover"
+                            className="mt-6 w-full h-auto rounded-[20px] border border-slate-700 object-cover"
                             priority
                         />
                     )}

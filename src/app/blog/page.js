@@ -31,13 +31,14 @@ export default function BlogIndex() {
     return (
         <div className="inter w-full">
             <Header />
-            <main className="min-h-screen bg-slate-900 py-16 px-4">
+            <main className="page-wrap min-h-screen">
                 <div className="max-w-3xl mx-auto">
-                    <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">Blog</h1>
-                    <p className="text-gray-400 mb-4">Articles and notes.</p>
+                    <p className="section-kicker">Dispatches / Writing</p>
+                    <h1 className="page-title display">Blog.</h1>
+                    <p className="page-intro">Articles, notes, and practical experiments from the workbench.</p>
                     <Link
                         href="/blog/tags"
-                        className="inline-block text-cyan-400 hover:text-cyan-300 text-sm mb-12 transition-colors"
+                        className="pill-button secondary mt-8 mb-12"
                     >
                         Browse by tag →
                     </Link>
@@ -50,7 +51,7 @@ export default function BlogIndex() {
                                 <Link
                                     key={post.slug}
                                     href={`/blog/${post.slug}`}
-                                    className="block rounded-lg bg-slate-800 border border-slate-700 shadow-md hover:border-cyan-400 transition-colors duration-200 overflow-hidden"
+                                    className="outline-card block overflow-hidden hover:border-cyan-400 transition-colors duration-200"
                                 >
                                     {post.cover && (
                                         <Image

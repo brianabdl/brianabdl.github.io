@@ -1,33 +1,16 @@
 import Image from 'next/image';
-import {documentation} from '@/app/documentation/documentation';
+import { documentation } from '@/app/documentation/documentation';
 
-const Body = () => {
-    return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-slate-900">
-            <main className="flex flex-col items-center justify-center flex-1 text-center max-w-6xl">
-                <h1 className="text-2xl md:text-4xl font-bold pt-4 mb-2 text-white">Documentation</h1>
-                <p className="text-gray-400 mb-8 px-4">A collection documenting the activities and events I have taken part in</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-4 w-full px-4 sm:px-0">
-                    {documentation.map((el, i) => (
-                        <div className="flex flex-col items-center justify-start space-y-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-slate-800" key={i}>
-                            <Image
-                                className="rounded-lg shadow-lg object-cover aspect-video w-full hover:scale-105 transition-transform duration-300"
-                                src={el.image}
-                                alt={el.name}
-                                loading='lazy'
-                                width={0}
-                                height={0}/>
-                            <div className="flex flex-col items-center justify-center p-3 w-full">
-                                <h2 className="text-sm md:text-lg text-balance font-bold text-white">{el.name}</h2>
-                                <p className="text-xs md:text-sm text-gray-400">{el.date}</p>
-                                <p className="text-xs md:text-sm text-gray-500">{el.place}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </main>
-        </div>
-    )
+export default function Body() {
+  return <main className="page-wrap">
+    <p className="section-kicker">Archive / Field notes</p>
+    <h1 className="page-title display">Documentation.</h1>
+    <p className="page-intro">A visual record of the activities, competitions, and events I&apos;ve taken part in.</p>
+    <div className="story-stream mt-14">
+      {documentation.map((item, index) => <article key={`${item.name}-${index}`} className="outline-card grid overflow-hidden md:grid-cols-[minmax(240px,38%)_1fr]">
+        <Image className="h-full min-h-[210px] w-full object-cover" src={`/${item.image}`} alt={item.name} loading="lazy" width={640} height={400} />
+        <div className="p-6 md:p-8"><p className="timestamp">{item.date}</p><h2 className="mt-4 text-2xl font-bold text-white">{item.name}</h2><p className="mt-3 text-gray-400">{item.place}</p></div>
+      </article>)}
+    </div>
+  </main>;
 }
-
-export default Body;

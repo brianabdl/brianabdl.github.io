@@ -21,7 +21,7 @@ export default function TagsIndex() {
     return (
         <div className="inter w-full">
             <Header />
-            <main className="min-h-screen bg-slate-900 py-16 px-4">
+            <main className="page-wrap min-h-screen">
                 <div className="max-w-3xl mx-auto">
                     <Link
                         href="/blog"
@@ -29,7 +29,7 @@ export default function TagsIndex() {
                     >
                         ← Back to blog
                     </Link>
-                    <h1 className="text-3xl lg:text-4xl font-bold text-white mt-6 mb-2">Tags</h1>
+                    <h1 className="page-title display mt-6 mb-2">Tags.</h1>
                     <p className="text-gray-400 mb-12">Browse posts by topic.</p>
 
                     {tags.length === 0 ? (

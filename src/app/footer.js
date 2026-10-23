@@ -15,19 +15,19 @@ const Footer = () => {
     ];
 
     return (
-        <footer className='w-full bg-gray-800'>
-            <div className='max-w-6xl mx-auto px-4 py-12'>
+        <footer className='site-footer w-full'>
+            <div className='max-w-6xl mx-auto'>
                 {/* Footer Content */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
                     {/* Brand */}
                     <div className='flex flex-col items-start'>
-                        <h3 className='text-white font-bold text-lg mb-2'>Brian</h3>
+                        <h3 className='site-wordmark text-white text-4xl mb-4'>Brian.</h3>
                         <p className='text-gray-400 text-sm'>Developer & Digital Creator</p>
                     </div>
 
                     {/* Quick Links */}
                     <div className='flex flex-col items-start'>
-                        <h4 className='text-white font-bold mb-4'>Quick Links</h4>
+                        <h4 className='eyebrow text-white mb-4'>Quick Links</h4>
                         <div className='flex flex-col space-y-2'>
                             <Link href='/' className='text-gray-400 hover:text-white transition-colors'>Home</Link>
                             <Link href='/creation' className='text-gray-400 hover:text-white transition-colors'>Projects</Link>
@@ -38,7 +38,7 @@ const Footer = () => {
 
                     {/* Social Links */}
                     <div className='flex flex-col items-start'>
-                        <h4 className='text-white font-bold mb-4'>Follow Me</h4>
+                        <h4 className='eyebrow text-white mb-4'>Follow Me</h4>
                         <div className='flex flex-row space-x-4'>
                             {socialLinks.map((social, index) => (
                                 <a

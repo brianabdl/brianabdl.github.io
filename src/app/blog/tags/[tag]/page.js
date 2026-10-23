@@ -45,7 +45,7 @@ export default async function TagPage({ params }) {
     return (
         <div className="inter w-full">
             <Header />
-            <main className="min-h-screen bg-slate-900 py-16 px-4">
+            <main className="page-wrap min-h-screen">
                 <div className="max-w-3xl mx-auto">
                     <Link
                         href="/blog/tags"
@@ -53,7 +53,7 @@ export default async function TagPage({ params }) {
                     >
                         ← All tags
                     </Link>
-                    <h1 className="text-3xl lg:text-4xl font-bold text-white mt-6 mb-2">
+                    <h1 className="page-title display mt-6 mb-2">
                         #{label}
                     </h1>
                     <p className="text-gray-400 mb-12">
@@ -65,7 +65,7 @@ export default async function TagPage({ params }) {
                             <Link
                                 key={post.slug}
                                 href={`/blog/${post.slug}`}
-                                className="block p-6 rounded-lg bg-slate-800 border border-slate-700 shadow-md hover:border-cyan-400 transition-colors duration-200"
+                                className="outline-card block p-6 hover:border-cyan-400 transition-colors duration-200"
                             >
                                 <h2 className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">
                                     {post.title}
