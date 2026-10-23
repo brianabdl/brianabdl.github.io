@@ -177,7 +177,7 @@ export default function Body() {
   return <main>
     <section className="hero page-wrap min-h-[620px] flex flex-col justify-center">
       <div className="hero-copy">
-        <p className="section-kicker hero-reveal">Portfolio / 2026</p>
+        <p className="section-kicker hero-reveal">Portfolio / WASD</p>
         <h1 className="display hero-title mt-5 max-w-5xl hero-reveal">HI, IM <span className="text-cyan-400">BRIAN.</span></h1>
         <p className="page-intro mt-7 hero-reveal">Developer, digital creator, and curious builder based in Surabaya. I turn useful ideas into thoughtful software and visual stories.</p>
         <div className="mt-9 flex flex-wrap gap-4 hero-reveal">

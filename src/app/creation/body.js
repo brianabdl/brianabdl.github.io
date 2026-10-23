@@ -6,20 +6,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-const categories = [{ id: 'all', name: 'All' }, { id: 'android', name: 'Android' }, { id: 'web', name: 'Web' }, { id: 'ai', name: 'AI & Data' }];
+const categories = [{ id: 'all', name: 'All' }, { id: 'android', name: 'Android' }, { id: 'web', name: 'Web' }, { id: 'ai', name: 'AI & Data' }, { id: 'tools', name: 'Tools' }];
 const projects = [
-  { name: 'TugasKu', category: 'android', description: 'A school task-list Android app for tracking assignments and deadlines, built with a modern Jetpack Compose UI.', repo: 'https://github.com/brianabdl/TugasKu', tags: ['Kotlin', 'Jetpack Compose', 'Material 3'] },
-  { name: 'Reksadana Radar', category: 'ai', description: 'An AI agent that monitors Indonesian equity mutual funds and tracks portfolio changes month over month.', repo: 'https://github.com/brianabdl/reksadana-radar', tags: ['Python', 'AI Agent', 'Docker'] },
-  { name: 'Nutrition Food Analyzer', category: 'web', description: 'A web app that breaks down the nutritional content of foods, deployed and live.', repo: 'https://github.com/brianabdl/nutrition-food-analyzer', demo: 'http://food.brianabdl.my.id/', tags: ['Laravel', 'PHP', 'Blade'] },
-  { name: 'Fundora', category: 'web', description: 'A personal finance manager for tracking income and expenses, built with Laravel.', repo: 'https://github.com/brianabdl/Fundora', tags: ['Laravel', 'PHP', 'Blade'] },
-  { name: 'SmartRouteID', category: 'ai', description: 'A route-optimization system that finds efficient paths between cities in East Java.', repo: 'https://github.com/brianabdl/SmartRouteID', tags: ['Python', 'Algorithms', 'Pathfinding'] },
-  { name: 'Kyklos', category: 'web', description: 'A digital attendance management system for organizations, built with Laravel.', repo: 'https://github.com/brianabdl/Kyklos', tags: ['Laravel', 'PHP', 'Blade'] },
+  { name: 'Tumbas', category: 'web', description: 'An IDX screener that tracks prices, broker accumulation, insider filings, and market-wide flow across the Indonesian stock market.', repo: 'https://github.com/brianabdl/Tumbas', tags: ['Laravel', 'TypeScript', 'Rust'] },
+  { name: 'Respir', category: 'ai', description: 'A guided voice pre-visit, a cough-based TB screen, and a structured clinician briefing for faster respiratory care.', repo: 'https://github.com/brianabdl/respir', demo: 'https://respir.brianabdl.my.id', tags: ['Laravel', 'Python', 'Machine Learning'] },
+  { name: 'Nelayar', category: 'web', description: 'A mobile-first marine GIS platform that uses oceanographic forecasts to recommend productive pelagic fishing zones.', repo: 'https://github.com/brianabdl/nelayar-gis', demo: 'https://nelayar.com', tags: ['TypeScript', 'GIS', 'Ocean Data'] },
+  { name: 'CineHub', category: 'web', description: 'A film catalogue and community app for exploring movies, writing reviews, curating watchlists, and managing accounts.', repo: 'https://github.com/brianabdl/CineHub', tags: ['Laravel', 'React', 'PHP'] },
+  { name: 'MobilexAI', category: 'android', description: 'A Kotlin mobile app that uses machine learning to predict student graduation success from academic and demographic data.', repo: 'https://github.com/brianabdl/MobilexAI', tags: ['Kotlin', 'Jetpack Compose', 'Machine Learning'] },
+  { name: 'Maddo', category: 'tools', description: 'A Rust service for monitoring IDX keterbukaan informasi and surfacing new company disclosures.', repo: 'https://github.com/brianabdl/Maddo', tags: ['Rust', 'IDX', 'Monitoring'] },
+  { name: 'OpenBoardView MCP', category: 'tools', description: 'Rust-based MCP tools that let coding agents inspect and work with OpenBoardView boardview files.', repo: 'https://github.com/brianabdl/openboardview-mcp', tags: ['Rust', 'MCP', 'Developer Tools'] },
+  { name: 'IDX Announcement Bot', category: 'ai', description: 'A Python bot that monitors new IDX-listed company disclosures and sends timely notifications.', repo: 'https://github.com/brianabdl/idx-announcement-bot', tags: ['Python', 'Telegram', 'Docker'] },
 ];
 const colors = ['mint', 'purple', 'yellow', 'pink', 'orange'];
 
 function ProjectCard({ project, index }) {
   return <article className={`accent-card ${colors[index % colors.length]} flex min-h-[300px] flex-col`}>
-    <p className="eyebrow">{project.category} / 0{index + 1}</p>
+    <p className="eyebrow project-eyebrow">{project.category} / 0{index + 1}</p>
     <h2 className="mt-5 text-3xl font-bold">{project.name}</h2>
     <p className="mt-3 flex-grow leading-7">{project.description}</p>
     <div className="mt-5 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="tag rounded-[2px] border border-black/40 px-2 py-1 text-[10px]">{tag}</span>)}</div>

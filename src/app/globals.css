@@ -222,6 +222,8 @@ button:focus-visible, a:focus-visible {
 .accent-card.yellow { background: var(--yellow); }
 .accent-card.pink { background: var(--pink); }
 .accent-card.orange { background: var(--orange); }
+.accent-card .project-eyebrow { color: #000; }
+.accent-card.purple .project-eyebrow { color: var(--white); }
 .outline-card {
   background: var(--canvas);
   border: 1px solid #313131;
