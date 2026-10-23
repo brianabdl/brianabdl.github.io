@@ -8,14 +8,12 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const categories = [{ id: 'all', name: 'All' }, { id: 'android', name: 'Android' }, { id: 'web', name: 'Web' }, { id: 'ai', name: 'AI & Data' }, { id: 'tools', name: 'Tools' }];
 const projects = [
-  { name: 'Tumbas', category: 'web', description: 'An IDX screener that tracks prices, broker accumulation, insider filings, and market-wide flow across the Indonesian stock market.', repo: 'https://github.com/brianabdl/Tumbas', tags: ['Laravel', 'TypeScript', 'Rust'] },
   { name: 'Respir', category: 'ai', description: 'A guided voice pre-visit, a cough-based TB screen, and a structured clinician briefing for faster respiratory care.', repo: 'https://github.com/brianabdl/respir', demo: 'https://respir.brianabdl.my.id', tags: ['Laravel', 'Python', 'Machine Learning'] },
   { name: 'Nelayar', category: 'web', description: 'A mobile-first marine GIS platform that uses oceanographic forecasts to recommend productive pelagic fishing zones.', repo: 'https://github.com/brianabdl/nelayar-gis', demo: 'https://nelayar.com', tags: ['TypeScript', 'GIS', 'Ocean Data'] },
   { name: 'CineHub', category: 'web', description: 'A film catalogue and community app for exploring movies, writing reviews, curating watchlists, and managing accounts.', repo: 'https://github.com/brianabdl/CineHub', tags: ['Laravel', 'React', 'PHP'] },
   { name: 'MobilexAI', category: 'android', description: 'A Kotlin mobile app that uses machine learning to predict student graduation success from academic and demographic data.', repo: 'https://github.com/brianabdl/MobilexAI', tags: ['Kotlin', 'Jetpack Compose', 'Machine Learning'] },
   { name: 'Maddo', category: 'tools', description: 'A Rust service for monitoring IDX keterbukaan informasi and surfacing new company disclosures.', repo: 'https://github.com/brianabdl/Maddo', tags: ['Rust', 'IDX', 'Monitoring'] },
   { name: 'OpenBoardView MCP', category: 'tools', description: 'Rust-based MCP tools that let coding agents inspect and work with OpenBoardView boardview files.', repo: 'https://github.com/brianabdl/openboardview-mcp', tags: ['Rust', 'MCP', 'Developer Tools'] },
-  { name: 'IDX Announcement Bot', category: 'ai', description: 'A Python bot that monitors new IDX-listed company disclosures and sends timely notifications.', repo: 'https://github.com/brianabdl/idx-announcement-bot', tags: ['Python', 'Telegram', 'Docker'] },
 ];
 const colors = ['mint', 'purple', 'yellow', 'pink', 'orange'];
 
