@@ -202,9 +202,29 @@ button:focus-visible, a:focus-visible {
 .pill-button, .outline-card { transition: border-color .3s ease, background-color .3s ease, transform .3s ease; }
 .pill-button:hover { transform: translateY(-3px); }
 .outline-card:hover { border-color: var(--mint); transform: translateY(-4px); }
+
+.year-header .h-px { transform: scaleX(0); transform-origin: left; }
+.year-header.year-visible h2 {
+  box-shadow: 0 0 24px rgba(60, 255, 208, 0.18);
+  text-shadow: 0 0 12px rgba(60, 255, 208, 0.4);
+}
+.year-header.year-visible .h-px {
+  transform: scaleX(1);
+}
+
 .reduced-motion .motion-section, .reduced-motion .motion-card { opacity: 1 !important; transform: none !important; }
 .reduced-motion .profile-image { opacity: 1; }
 .reduced-motion .hero .pill-button:first-child { animation: none; }
+.reduced-motion .year-header.year-visible h2,
+.reduced-motion .year-header h2 {
+  box-shadow: none;
+  text-shadow: none;
+}
+.reduced-motion .year-header.year-visible .h-px,
+.reduced-motion .year-header .h-px {
+  transform: scaleX(1);
+  transition: none;
+}
 .section-kicker, .eyebrow {
   color: var(--mint);
   font-size: 12px;

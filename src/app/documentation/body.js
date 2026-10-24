@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { documentation } from '@/app/documentation/documentation';
+import { useEffect, useRef, useState } from 'react';
 
 function getYear(item) {
   const match = item.date.match(/\d{4}/);
@@ -56,6 +59,40 @@ export default function Body() {
     years: sortedYears.length
   };
 
+  const [showTop, setShowTop] = useState(false);
+  const yearRefs = useRef({});
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('year-visible');
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    sortedYears.forEach((year) => {
+      const el = yearRefs.current[year];
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [sortedYears]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <main className="page-wrap">
       <p className="section-kicker">Archive / Field notes</p>
@@ -85,11 +122,14 @@ export default function Body() {
       
       {sortedYears.map((year) => (
         <section key={year} className="mt-16">
-          <div className="flex items-center gap-4 mb-10">
-            <h2 className="mono text-sm tracking-[2px] text-[color:var(--mint)] px-3 py-1 border border-[color:var(--mint)] rounded-[20px]">
+          <div 
+            ref={(el) => (yearRefs.current[year] = el)}
+            className="year-header flex items-center gap-4 mb-10"
+          >
+            <h2 className="mono text-sm tracking-[2px] text-[color:var(--mint)] px-3 py-1 border border-[color:var(--mint)] rounded-[20px] shadow-[0_0_0_rgba(60,255,208,0)] transition-all duration-700">
               {year}
             </h2>
-            <div className="h-px flex-1 bg-gradient-to-r from-[color:var(--purple-rule)] to-transparent" />
+            <div className="h-px flex-1 bg-gradient-to-r from-[color:var(--purple-rule)] to-transparent origin-left scale-x-0 transition-transform duration-700 delay-150" />
           </div>
           <div className="story-stream">
             {grouped[year].map((item, index) => {
@@ -136,6 +176,18 @@ export default function Body() {
           </div>
         </section>
       ))}
+      
+      <button
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border border-[color:var(--mint)] bg-[color:var(--canvas)]/90 backdrop-blur text-[color:var(--mint)] shadow-[0_0_24px_rgba(60,255,208,0.12)] transition-all duration-300 hover:bg-[color:var(--mint)] hover:text-[color:var(--canvas)] hover:shadow-[0_0_32px_rgba(60,255,208,0.28)] ${
+          showTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 12V4M8 4L4 8M8 4L12 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
     </main>
   );
 }

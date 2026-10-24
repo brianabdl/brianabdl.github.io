@@ -72,26 +72,34 @@ export const documentation = [
   {
     id: 11,
     image: "documentation/MobDevGDGOCUNESA.jpg",
-    name: "Mentor for Mobile Development at GDGOC UNESA",
-    date: "2024-2026",
+    name: "Mentor Mobile Development at GDGOC UNESA 2024",
+    date: "2024",
     place: "Google Developer Group (GDG) UNESA, Surabaya"
   }, 
   {
     id: 12,
+    image: "documentation/MobDevGDGOCUNESA.jpg",
+    name: "Mentor Mobile Development at GDGOC UNESA 2025",
+    date: "2025",
+    place: "Google Developer Group (GDG) UNESA, Surabaya"
+  }, 
+  
+  {
+    id: 13,
     image: "documentation/ToshinPrimaInternship.jpg",
     name: "Internship: Toshin Prima",
     date: "Agustus-Desember 2026",
     place: "PT. Toshin Prima Fine Blanking, Surabaya"
   }, 
   {
-    id: 13,
+    id: 14,
     image: "documentation/OliviaXI2026.jpg",
     name: "2nd Place: Olivia XI Web Technology Competition 2026",
     date: "2026",
     place: "State University Of Surabaya"
   },
   {
-    id: 14,
+    id: 15,
     image: "documentation/ExploAItion2026.jpg",
     name: "Volunteer: Mentor at ExplorAItion Mini Hackaton 2026",
     date: "2026",
