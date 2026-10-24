@@ -96,14 +96,14 @@ export const documentation = [
     description: "Returned as a mentor to help the next cohort build production-ready mobile applications with best practices."
   },   
   
-  {
-    id: 13,
-    image: "documentation/ToshinPrimaInternship.jpg",
-    name: "Internship: Backend Developer at PT. Toshin Prima Fine Blanking",
-    date: "Agustus-Desember 2026",
-    place: "Surabaya",
-    description: "Building backend systems and APIs for industrial applications while gaining experience in real-world software engineering."
-  }, 
+  // {
+  //   id: 13,
+  //   image: "documentation/ToshinPrimaInternship.jpg",
+  //   name: "Internship: Backend Developer at PT. Toshin Prima Fine Blanking",
+  //   date: "Agustus-Desember 2026",
+  //   place: "Surabaya",
+  //   description: "Building backend systems and APIs for industrial applications while gaining experience in real-world software engineering."
+  // }, 
   {
     id: 14,
     image: "documentation/OliviaXI2026.jpg",
