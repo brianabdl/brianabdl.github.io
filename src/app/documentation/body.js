@@ -119,7 +119,9 @@ export default function Body() {
                       className="h-full min-h-[220px] w-full object-cover transition-transform duration-500 group-hover:scale-105" 
                       src={`/${item.image}`} 
                       alt={item.name} 
-                      loading="lazy" 
+                      loading={index === 0 && year === sortedYears[0] ? "eager" : "lazy"}
+                      priority={index === 0 && year === sortedYears[0]}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 38vw, 640px"
                       width={640} 
                       height={400} 
                     />
