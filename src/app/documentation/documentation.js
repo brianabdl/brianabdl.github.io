@@ -32,28 +32,28 @@ export const documentation = [
     image: "documentation/KecesJurnalis.jpg",
     name: "CEO Editing at Keces Jurnalis",
     date: "2022-2023",
-    place: "Kediri"
+    place: "Pawyatan Daha 1 Vocational High School, Kediri"
   },
   {
     id: 5,
     image: "documentation/JurnalisTraining.jpg",
     name: "Organizing Committee, Journalist Training: Good Journalist In Digital Era",
     date: "06-08-2023",
-    place: "Kediri"
+    place: "Pawyatan Daha 1 Vocational High School, Kediri"
   },
   {
     id: 6,
     image: "documentation/PawonSinema.jpg",
     name: "Internship: Pawon Sinema",
     date: "October-December 2022",
-    place: "Kediri"
+    place: "Pawon Sinema,Kediri"
   },
   {
     id: 7,
     image: "documentation/InternIndoweb.jpg",
     name: "Internship: Indoweb.id",
     date: "October-December 2023",
-    place: "Kediri"
+    place: "Indoweb.id, Kediri"
   },
   {
     id: 8,
@@ -61,5 +61,33 @@ export const documentation = [
     name: "Volunteer Kalibrasi Roadshow Kediri: Film Ora Serem",
     date: "26-08-2022",
     place: "Kediri"
+  },
+  {
+    id: 9,
+    image: "documentation/DevFestCloud2025.jpg",
+    name: "Volunteer Google DevFest Cloud Surabaya 2025",
+    date: "2025",
+    place: "Western Sydney University Indonesia, Surabaya"
+  },
+  {
+    id: 10,
+    image: "documentation/MobDevGDGOCUNESA.jpg",
+    name: "Mentor for Mobile Development at GDGOC UNESA",
+    date: "2024-2026",
+    place: "Google Developer Group (GDG) UNESA, Surabaya"
+  }, 
+  {
+    id: 11,
+    image: "documentation/ToshinPrimaInternship.jpg",
+    name: "Internship: Toshin Prima",
+    date: "Agustus-Desember 2026",
+    place: "PT. Toshin Prima Fine Blanking, Surabaya"
+  }, 
+  {
+    id: 12,
+    image: "documentation/OliviaXI2026.jpg",
+    name: "2nd Place: Olivia XI Web Technology Competition 2026",
+    date: "2026",
+    place: "State University Of Surabaya"
   }
 ]

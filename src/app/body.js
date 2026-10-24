@@ -233,6 +233,8 @@ export default function Body() {
       <h2 className="mt-4 text-4xl font-bold text-white">Things I care about.</h2>
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         <div className="motion-card"><Experience title="Android Development" description="Learning the world of programming with a focus on the Android platform." /></div>
+        <div className="motion-card"><Experience title="Web Development" description="Building web applications and tools with a focus on performance and usability." /></div>
+        <div className="motion-card"><Experience title="Data Analysis" description="Exploring data to find insights and patterns that can inform decisions." /></div>
         <div className="motion-card"><Experience title="Photography" description="A hobby of capturing the things that are meaningful to me." /></div>
       </div>
     </section>
