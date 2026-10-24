@@ -51,13 +51,6 @@ export default function Body() {
     }, {});
 
   const sortedYears = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
-  
-  const stats = {
-    total: items.length,
-    competitions: items.filter(i => getType(i) === 'Competition').length,
-    internships: items.filter(i => getType(i) === 'Internship').length,
-    years: sortedYears.length
-  };
 
   const [showTop, setShowTop] = useState(false);
   const yearRefs = useRef({});
@@ -100,25 +93,6 @@ export default function Body() {
       <p className="page-intro">
         A visual record of the activities, competitions, and events I&apos;ve taken part in.
       </p>
-      
-      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl">
-        <div className="outline-card p-4 text-center">
-          <p className="text-2xl font-bold text-[color:var(--mint)]">{stats.total}</p>
-          <p className="mono text-[10px] tracking-[1.6px] text-[color:var(--muted)] mt-1">TOTAL</p>
-        </div>
-        <div className="outline-card p-4 text-center">
-          <p className="text-2xl font-bold text-white">{stats.competitions}</p>
-          <p className="mono text-[10px] tracking-[1.6px] text-[color:var(--muted)] mt-1">AWARDS</p>
-        </div>
-        <div className="outline-card p-4 text-center">
-          <p className="text-2xl font-bold text-white">{stats.internships}</p>
-          <p className="mono text-[10px] tracking-[1.6px] text-[color:var(--muted)] mt-1">INTERNSHIPS</p>
-        </div>
-        <div className="outline-card p-4 text-center">
-          <p className="text-2xl font-bold text-white">{stats.years}</p>
-          <p className="mono text-[10px] tracking-[1.6px] text-[color:var(--muted)] mt-1">YEARS</p>
-        </div>
-      </div>
       
       {sortedYears.map((year) => (
         <section key={year} className="mt-16">

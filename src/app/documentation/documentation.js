@@ -78,7 +78,7 @@ export const documentation = [
   }, 
   {
     id: 12,
-    image: "documentation/MobDevGDGOCUNESA.jpg",
+    image: "documentation/MobDevGDGOCUNESA2.jpg",
     name: "Mentor Mobile Development at GDGOC UNESA 2025",
     date: "2025",
     place: "Google Developer Group (GDG) UNESA, Surabaya"
@@ -87,9 +87,9 @@ export const documentation = [
   {
     id: 13,
     image: "documentation/ToshinPrimaInternship.jpg",
-    name: "Internship: Toshin Prima",
+    name: "Internship: Backend Developer at PT. Toshin Prima Fine Blanking",
     date: "Agustus-Desember 2026",
-    place: "PT. Toshin Prima Fine Blanking, Surabaya"
+    place: "Surabaya"
   }, 
   {
     id: 14,
