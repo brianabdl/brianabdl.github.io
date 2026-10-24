@@ -231,12 +231,27 @@ button:focus-visible, a:focus-visible {
   background: var(--canvas);
   border: 1px solid #313131;
   border-radius: 20px;
+  position: relative;
 }
 .story-stream {
   border-left: 1px dashed var(--purple-rule);
-  padding-left: 24px;
+  padding-left: 28px;
+  position: relative;
 }
-.story-stream > * { margin-bottom: 16px; }
+.story-stream > * { margin-bottom: 18px; }
+.story-stream > article::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--purple-rule);
+  border: 2px solid var(--canvas);
+  box-shadow: 0 0 0 1px var(--purple-rule);
+}
 .timestamp { color: var(--muted); font-size: 11px; white-space: nowrap; }
 .pill-button {
   display: inline-flex;
@@ -274,7 +289,8 @@ button:focus-visible, a:focus-visible {
   .site-wordmark { font-size: 3.2rem; }
   .display, .page-title { font-size: clamp(3rem, 15vw, 4.5rem); }
   .story-stream { border-left: 0; padding-left: 0; }
-  .timestamp { display: block; margin-bottom: 8px; }
+  .story-stream > article::before { display: none; }
+  .timestamp { display: inline; margin-bottom: 0; }
   .schematic { top: 23%; right: -25%; width: 80vw; opacity: .32; }
   .hero-copy { max-width: 90%; }
   .hero { min-height: 680px; }
