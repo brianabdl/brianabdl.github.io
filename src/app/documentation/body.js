@@ -134,8 +134,8 @@ export default function Body() {
                       )}
                     </div>
                   </div>
-                  <div className="p-6 md:p-8 flex flex-col justify-center">
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <div className="p-6 md:p-8 flex flex-col justify-center gap-3">
+                    <div className="flex flex-wrap items-center gap-2">
                       <p className="timestamp">{item.date}</p>
                       <span className="text-[color:var(--muted)] hidden sm:inline">•</span>
                       <p className="timestamp text-[color:var(--muted)] w-full sm:w-auto">{item.place}</p>
@@ -143,6 +143,11 @@ export default function Body() {
                     <h3 className="text-xl md:text-2xl font-bold text-white leading-tight group-hover:text-[color:var(--blue)] transition-colors duration-300">
                       {item.name}
                     </h3>
+                    {item.description && (
+                      <p className="text-sm md:text-base text-[color:var(--muted)] leading-relaxed line-clamp-3">
+                        {item.description}
+                      </p>
+                    )}
                   </div>
                 </article>
               );
