@@ -89,5 +89,12 @@ export const documentation = [
     name: "2nd Place: Olivia XI Web Technology Competition 2026",
     date: "2026",
     place: "State University Of Surabaya"
+  },
+  {
+    id: 14,
+    image: "documentation/ExploAItion2026.jpg",
+    name: "Volunteer: Mentor at ExplorAItion Mini Hackaton 2026",
+    date: "2026",
+    place: "Garuda Spark, Surabaya"
   }
 ]
